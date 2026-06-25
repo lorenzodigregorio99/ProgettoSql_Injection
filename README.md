@@ -23,6 +23,8 @@ La pagina `login.php` sul server target accettava l'input dell'utente (il campo 
 ### 1. Attacco UNION-based (Data Exfiltration)
 Per estrarre i dati tramite l'operatore `UNION`, l'iniezione deve presentare lo stesso numero esatto di colonne della query `SELECT` originale.
 *   **Riconoscimento delle colonne (`ORDER BY`):** Sono stati effettuati dei tentativi incrementali iniettando la clausola `ORDER BY 1`, `ORDER BY 2`, `ORDER BY 3`, ecc. Incrementando il numero progressivamente, l'applicazione risponde correttamente fino a quando il valore non supera il numero reale di colonne presenti nella tabella, mandando il sistema in errore. Identificato così il numero esatto di campi, è stata costruita la `UNION SELECT`.
+*   <img width="879" height="663" alt="image" src="https://github.com/user-attachments/assets/d7cb09c6-a8de-4e8c-b826-440cba3362b5" />
+
 *   <img width="1165" height="747" alt="image" src="https://github.com/user-attachments/assets/4ac6f24b-272d-4b95-8cf0-6cafa5b3df26" />
 
 *   **Risultato:** L'iniezione ha forzato il database a stampare a schermo informazioni strutturali cruciali: il **nome esatto del database**, l'identità dell'utente di sistema (scoprendo che il servizio girava pericolosamente come **`root`**) e l'elenco completo di **username e hash delle password** degli utenti.
