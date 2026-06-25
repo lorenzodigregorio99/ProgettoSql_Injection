@@ -38,6 +38,8 @@ Per estrarre i dati tramite l'operatore `UNION`, l'iniezione deve presentare lo 
 Nello scenario in cui l'applicazione fosse stata configurata per non stampare a video gli errori o l'output dei dati (rendendo l'attacco *invisibile* o *cieco*), è stata testata la tecnica della **Blind SQL Injection basata sul tempo**.
 *   **Verifica della vulnerabilità:** È stato iniettato il comando `SLEEP(5)`. Notando che il server impiegava esattamente 5 secondi in più a rispondere, è stata confermata la presenza della falla.
 *   **Estrazione dei dati alla cieca:** Per indovinare le informazioni senza vederle, si interroga il database ponendo domande binarie (Vero/Falso). Ad esempio, iniettando una logica condizionale del tipo: *"Se la password dell'amministratore inizia con la lettera 'A', allora vai in `SLEEP(5)`"*. Se il server ritarda la risposta, la condizione è vera, permettendo di ricostruire stringhe complesse carattere per carattere semplicemente misurando i tempi di risposta del server.
+*   <img width="1217" height="742" alt="image" src="https://github.com/user-attachments/assets/15f8c07b-a2e8-4f38-b25c-df616737f6ce" />
+
 
 ---
 
