@@ -1,3 +1,16 @@
+# Linux Lab: SQL Injection (Data Exfiltration) & Infrastructure Hardening
+
+Questo repository contiene un progetto di laboratorio orientato alla cybersecurity e alla gestione infrastrutturale. Lo scenario simula un attacco di SQL Injection (SQLi) mirato all'estrazione di dati sensibili da un database, seguito dall'implementazione di contromisure sistemistiche su piattaforma Linux.
+
+⚠️ **Disclaimer:** *Questo progetto è stato realizzato esclusivamente a scopo didattico in un ambiente virtuale isolato e controllato.*
+
+---
+
+## 📐 Architettura di Rete e Infrastruttura
+
+L'ambiente è stato interamente virtualizzato su **VMware** ed è composto da due server Linux Ubuntu configurati con **IP statici sulla stessa sottorete** per garantire la comunicazione diretta:
+
+
 *   **Server Target (Ubuntu Server + XAMPP):** Funge da Web Server dell'infrastruttura. Ospita il servizio Apache, il DBMS MySQL e l'applicazione web di autenticazione (`login.php`).
 *   **Client Attaccante (Ubuntu Server):** Macchina remota utilizzata per testare la sicurezza del Web Server e sferrare l'attacco attraverso la rete locale.
 
