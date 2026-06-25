@@ -28,6 +28,11 @@ Per estrarre i dati tramite l'operatore `UNION`, l'iniezione deve presentare lo 
 *   <img width="1165" height="747" alt="image" src="https://github.com/user-attachments/assets/4ac6f24b-272d-4b95-8cf0-6cafa5b3df26" />
 
 *   **Risultato:** L'iniezione ha forzato il database a stampare a schermo informazioni strutturali cruciali: il **nome esatto del database**, l'identità dell'utente di sistema (scoprendo che il servizio girava pericolosamente come **`root`**) e l'elenco completo di **username e hash delle password** degli utenti.
+*   <img width="1191" height="780" alt="image" src="https://github.com/user-attachments/assets/2a79804a-3f04-4bb2-88cd-1a104f0e42c9" />
+*   <img width="1189" height="769" alt="image" src="https://github.com/user-attachments/assets/ba54f281-c84b-49db-bbe7-3dffba98a9fe" />
+
+
+
 
 ### 2. Attacco Blind SQL Injection (Time-Based)
 Nello scenario in cui l'applicazione fosse stata configurata per non stampare a video gli errori o l'output dei dati (rendendo l'attacco *invisibile* o *cieco*), è stata testata la tecnica della **Blind SQL Injection basata sul tempo**.
